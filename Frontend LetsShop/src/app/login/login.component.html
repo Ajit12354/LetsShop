@@ -1,0 +1,69 @@
+<div class="Login-Page">
+   
+  <div class="Login-Left Login-LR">
+    <img src="assets/logo.jpeg">
+  </div>
+
+
+  <div class="Login-Right Login-LR">
+      <h3>Welcome to LetShop ShopEasy  </h3>
+<!--
+    <div style="display: flex;justify-content: space-between;">
+      <div class="User User-User" ><span style="margin-right: 0.5rem;"><i class="fa fa-shopping-bag" aria-hidden="true"></i></span>User</div>
+      <div class="User User-Admin" ><span style="margin-right: 0.5rem;"><i class="fa fa-lock" aria-hidden="true"></i></span>Admin</div>
+      <div class="User User-Retailer"><span style="margin-right: 0.5rem;"><i class="fa fa-truck" aria-hidden="true"></i></span>Retailer</div>
+    </div> -->
+
+    <div class="white-box">
+      
+  
+
+  <select [(ngModel)]="selected" >
+      <option value="" selected="selected">select role</option>
+      <option value="User">User</option>
+      <option value="Admin">Admin</option>
+      <option value="Retailer">Retailer</option>  
+  </select>
+
+<!--  <button class="btn btn-info" (click)="Login123()">Login NOW</button> 
+-->
+  
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()" class="loginform">
+
+  <div>
+      <tr>
+          <td>
+              <label for="email">
+                  Email
+              </label>
+          </td>
+          <td>
+              <input id="email" type="text" formControlName="email" placeholder="Email" required>
+          </td>
+      </tr>
+  </div>
+
+
+  <div>
+      <tr>
+          <td>
+              <label for="password">
+                  Password
+              </label>
+          </td>
+          <td>
+              <input id="password" type="password" formControlName="password" placeholder="Password" required>
+          </td>
+      </tr>
+  </div>
+
+  <button class="btn btn-success" type="submit" [disabled]="checkoutForm.invalid">Login</button>
+
+</form>
+
+<a routerLink="forget" >forget password</a>
+
+<h4> Dont Have Account? SignUp</h4>
+<button type="button" class="btn btn-success" routerLink="signup">SignUp</button>    <button type="button" class="btn btn-success" routerLink="/">Back</button>
+
+</div>

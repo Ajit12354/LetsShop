@@ -1,0 +1,39 @@
+
+<table>
+    <tr>
+        <td>Enter Product Name </td><td><input type="text" [(ngModel)]="srchkeyword"></td>
+        <td><button class="btn btn-info" (click)="searchByName()">Search</button></td> 
+        <td><button class="btn btn-info" (click)="lowtohigh_()">Sort Low to High</button></td> 
+        <td>      </td>
+        <td><button class="btn btn-info" (click)="hightolow_()">Sort High to low</button></td>
+        <td> <a [routerLink]="['/filter',srchkeyword]" class="btn btn-info">Filter Searched Product</a></td>
+        <td><button class="btn btn-info" routerLink="/showall">Back</button></td>
+     </tr>
+</table>
+<table class="table table-bordered">
+<thead>
+    <th>Product</th><th>Product Name</th> <th>Product Price </th> <th>Description</th><th>Quantity</th><th>Action</th>
+</thead>
+<tbody>
+        <tr *ngFor="let v of productArray">
+            <td style="width:10;height:50"><lib-ngx-image-zoom
+                [thumbImage]=v.productimage
+                [fullImage]=v.productimage
+                [magnification]="2"
+                [enableScrollZoom]="true"
+                [enableLens]="true"
+                [lensWidth]="200"
+            ></lib-ngx-image-zoom>
+            </td>
+                <td>{{ v.productname}}</td>
+                <td>{{ v.productprice}}</td>
+                <td>{{ v.productdesc}}</td>
+                <td>{{v.productquantity}}</td>
+                <td> <button class="btn btn-warning" (click)=AddWish(v.productid)>Add to wishlist</button><br>
+                     <button class="btn btn-danger" (click)=AddCart(v.productid)>Add to cart </button><br>
+                     <button class="btn btn-success" routerLink="/cart">View Cart</button><br>
+                     <button class="btn btn-info" routerLink="/wishlist">View Wishlist</button><br>
+                </td>
+        </tr>
+</tbody>
+</table>

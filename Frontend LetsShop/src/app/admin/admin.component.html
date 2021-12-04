@@ -1,0 +1,42 @@
+<div class="div-1" style="text-align: center;">
+    <h2>Add Retailer</h2>
+</div>
+<br>
+<br>
+
+
+<form #addretailerform="ngForm" (ngSubmit)=addretailer(addretailerform) novalidate >
+    <table class="centre">
+        <tr >
+            <td ><label for='retailerid'>Retailer ID</label></td>
+            <td ><input type="text" name='retailerid' ngModel required></td>
+        </tr>
+        <tr >
+            <td><label for='retailername'>Retailer Name</label></td>
+            <td ><input type="text" name='retailername' ngModel required></td>
+        </tr>
+        <tr >
+            <td ><label for='retaileremail'>Retailer Email</label></td>
+            <td ><input type="text" name='retaileremail' ngModel required ></td>
+        </tr>
+        <tr >
+            <td ><label for='retailerphnumber'>Phone Munber </label></td>
+            <td ><input type="text" name='retailerphnumber' ngModel required ></td>
+        </tr>
+        <tr>
+            <td ><label for='retailerpass'>Retailer passwordd </label></td>
+            <td ><input type="text" name='retailerpass' ngModel required ></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button type="submit" [disabled]="addretailerform.invalid" style="margin:auto auto;display: block;" class="btn btn-success">Save</button></td>
+            
+        </tr>
+    </table>
+</form>
+<br>
+<br>
+<button class="btn btn-info" style="margin-left:49% ;" routerLink="/tempproduct/Admin/displayretailers"> Show Retailers</button>
+<br>
+<br>
+<button class="btn btn-warning" style="margin-left:50% ;" routerLink="/tempproduct/Admin">Main Page</button>

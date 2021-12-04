@@ -1,0 +1,28 @@
+
+<h3 style="margin-bottom: 0.5rem;">Wishlist<span style="margin-left: 0.5rem;"><i class="fa fa-caret-right" aria-hidden="true"></i></span></h3>
+<button class="btn btn-info" routerLink="/showall">View Products</button>
+<div class="Products">
+    <div class="Product" *ngFor=" let wishlist of wishMyDTO" >
+        <div class="Image" >
+            <img src={{wishlist.productdto.productimage}} style="max-height: 100%;max-width: 100%;object-fit:contain;">
+        </div>
+        <div class="Detail">
+            <p style="font-size: 1.5rem;font-weight: bolder;">{{wishlist.productdto.productbrand}} {{wishlist.productdto.productname}}</p>
+            <p style="font-size: 1.5rem;font-weight: bolder;margin: 1rem 0;">{{wishlist.productdto.productprice | currency:"INR"}}</p>
+            <p style="font-size: 0.95rem;font-weight: bolder;color: red;margin-left:10rem" *ngIf="wishlist.productdto.productquantity==0">*Out of stock</p>
+            <div style="display: flex;justify-content: flex-end;">
+                <div class="btn btn-info" (click)="addToCartF(wishlist.productdto.productid)"><span style="margin-right: 0.5rem;"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>Add To Cart</div>
+                <div class="btn btn-info" (click)="deleteItem(wishlist.productdto.productid)" ><span style="margin-right: 0.5rem;"><i class="fa fa-trash" aria-hidden="true"></i></span>Delete Item</div>
+                <div class="btn btn-danger" (click)="deleteF(wishlist)"><span style="margin-right: 0.25rem;"><i class="fa fa-trash" aria-hidden="true"></i></span>Delete Wishlist</div>
+            
+            </div>
+        </div>        
+    </div>
+</div>
+
+<div *ngIf="!status" style="width: 150px;height: 70px;left:48%;top:45%;position: absolute;">
+    <p>Nothing to Show</p>
+</div>  
+<div class="Message" *ngIf="popUp" [ngClass]="{'success':!error,'Error':error}">
+ <p  style="text-align: center;width:100%">{{message}}</p> </div>
+

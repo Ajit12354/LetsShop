@@ -1,0 +1,78 @@
+<div class="header">
+    <h1>Update Product</h1>
+</div>
+<br>
+<br>
+
+<form #prodForm="ngForm" (ngSubmit)=addProduct(prodForm)>
+<table class="table-1" align="center">
+    <tr>
+        <td><label for="tempretailerid">Retailer ID </label></td>
+        <td> <input type="text"  class="form-control" name="tempretailerid" ngModel required ></td> 
+    </tr>
+    <tr>
+        <td><label for="tempproductcategory"  >Category</label></td>
+        <td >
+            <select name="tempproductcategory"  class="form-control"  ngModel  required >
+                <option  value="Mobile">Mobile</option>
+                <option value="Fashion">Fashion</option>
+                <option value="Electronics">Electronics</option>
+            </select>
+    
+
+        </td>
+    </tr>
+    
+    <tr>
+        <td><label for="tempproductid">Prod ID </label></td>
+        <td> <input type="text"  class="form-control" name="tempproductid" ngModel required ></td> 
+    </tr>
+        <tr>
+        <td><label for="tempproductsubcategory">Sub Category</label></td>       
+        <td><input type="text" class="form-control" name="tempproductsubcategory" ngModel required></td> 
+        </tr>
+        <tr>
+            <td><label for="tempproductname">Product Name</label></td>
+            <td><input type="text" class="form-control" name="tempproductname" ngModel required></td>
+            </tr>
+   
+    <tr>
+        <td><label for="tempproductbrand"> Brand</label></td>
+        <td>
+            <input type="text" class="form-control" name="tempproductbrand" ngModel required>
+        </td>
+    </tr>
+    
+    <tr>
+        <td><label for="tempproductprice">  Price</label></td>
+        <td>
+            <input type="text" class="form-control" name="tempproductprice" ngModel required>
+        </td>
+        </tr>
+        <tr>
+        <td><label for="tempproductquantity">  Stock</label></td>
+        <td><input type="number" class="form-control" name="tempproductquantity" ngModel required></td>
+    </tr>
+    <tr>
+        <td><label for="tempproductdesc">  Product description</label></td>
+        <td><textarea class="form-control" rows="3" name="tempproductdesc" ngModel required></textarea></td>
+        </tr>
+        
+          <tr>
+             <td> <label for="tempproductimage">Upload Image Path</label> </td>
+              <td>
+                <input type="text" class="form-control" name="tempproductimage" ngModel required>
+            </td>
+          </tr>
+          <br>
+          <div class="col text-left">
+        <button type="submit" class="btn btn-primary" >Add Product</button>
+        <br>
+        <br>
+        <button  class="btn btn-primary" routerLink="/tempproduct/Retailer">Back</button>
+        </div>
+        </table>
+        
+    </form>
+
+    

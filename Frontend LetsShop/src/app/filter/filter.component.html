@@ -1,0 +1,79 @@
+<button class="btn btn-info" routerLink="/showall">Back</button>
+<br>
+<br>
+
+<tr>
+    <td>ProductBrand</td><td><select [(ngModel)]="brand">
+            <option *ngFor="let p of product2" [value]="p.productbrand">{{p.productbrand}}</option>
+        </select>
+    </td>
+    <td><button class="btn btn-info" (click)="Apply_Filter()">Apply Filter</button></td>
+    <td>     </td>
+    <td><button class="btn btn-info" (click)="lowtohigh()">Sort Low to High</button></td> 
+    <td>      </td>
+    <td><button class="btn btn-info" (click)="hightolow()">Sort High to low</button></td>
+    <td>Minimum Price</td><td><input type="text" [(ngModel)]="minprice"></td>
+    <td>Maximum Price</td><td><input type="text" [(ngModel)]="maxprice"></td>
+    <td><button class="btn btn-info" (click)="minmaxfilter()">Apply Price Filter</button></td>
+
+</tr>
+<table class="table table-bordered">
+    <thead>
+        <th>Product</th><th>Product Name</th> <th>Product Price </th> <th>Description</th><th>Quantity</th><th>Action</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let v of productArray">
+            <td><lib-ngx-image-zoom
+                [thumbImage]=v.productimage
+                [fullImage]=v.productimage
+                [magnification]="2"
+                [enableScrollZoom]="true"
+                [enableLens]="true"
+                [lensWidth]="200"
+            ></lib-ngx-image-zoom>
+            </td>
+            <td>{{ v.productname}}</td>
+            <td>{{ v.productprice}}</td>
+            <td>{{ v.productdesc}}</td>
+            <td>{{v.productquantity}}</td>
+            <td> <button  class="btn btn-warning" (click)=AddWish(v.productid)>Add to wishlist</button><br>
+                 <button class="btn btn-danger" (click)=AddCart(v.productid)>Add to cart </button><br>
+                 <button class="btn btn-success" routerLink="/cart">View Cart</button><br>
+                 <button class="btn btn-info" routerLink="/wishlist"> View Wishlist </button><br>
+            </td>
+    </tr>
+    </tbody>
+    </table>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

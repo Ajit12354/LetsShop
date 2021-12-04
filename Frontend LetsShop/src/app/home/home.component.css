@@ -1,0 +1,51 @@
+marquee{
+    background-color: #063FC0;
+    font-style:oblique;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:#F1E014;
+}
+
+button{
+   padding-right: 10px;
+   
+}
+img{
+    border-radius: 0.25rem;
+   
+}
+
+img:focus{
+    border:none;
+    outline: none;
+}
+
+.Large-Flex{
+    width: 70%;
+   
+    overflow: hidden;
+    margin-bottom:1rem;
+}
+.Large-Flex img{
+    max-width: 50%;
+    max-height: 50%;
+    object-fit:cover;
+    padding-inline: 6px;
+    
+}
+.small-Flex{
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    margin-bottom:1rem;
+    justify-content: space-between;
+}
+@media (max-width:1300px)
+{
+    .small{
+        width: 200px;
+    }
+    .small img{
+        width: 200px;
+        object-fit: cover;
+    }
+}

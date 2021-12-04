@@ -1,0 +1,74 @@
+.Login-Page {
+  display: flex;
+  height: 500px;
+  width: 650px;
+  position: absolute;
+  top: calc(50% - 250px);
+  left: calc(50% - 325px);
+  border-radius: 0.25rem;
+  background-color: #a4bccf;
+  font-family: Arial, Helvetica, sans-serif;
+  animation: slide-open-login 350ms forwards;
+}
+
+.Login-LR {
+  border-radius: 0.25rem;
+  padding: 1.25rem;
+}
+.Login-Left {
+  width: 40%;
+  background-color:#063fc0;
+  position: relative;
+}
+
+
+.Login-Left img {
+  width: calc(260px - 3rem);
+  object-fit: cover;
+  margin: 1rem auto;
+  position:absolute;
+  top: calc(50% - 5rem);
+}
+
+
+
+
+
+.Login-Right {
+  width: 60%;
+  background-color:#f1e014;
+}
+.User {
+  flex-grow: 1;
+  padding: 0.25rem;
+  background-color: #063fc0;
+  color: white;
+  text-align:justify;
+  cursor: pointer;
+  border-radius: 17px;
+}
+.Button-Click {
+  background-color: rgb(232, 240, 254);
+  color: #31353d;
+  font-weight: bolder;
+}
+.Form-group {
+  padding: 2rem 1rem;
+  height: calc(500px - 8rem);
+  border-radius: 0.25rem;
+  background-color: white;
+}
+
+td {
+    width:80px;
+    padding:5px;
+}
+
+.loginform{
+    padding:10px;
+}
+
+.white-box {
+  background-color: white;
+  padding:10px;
+}

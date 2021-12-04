@@ -1,0 +1,76 @@
+<div class="header">
+    <h1>Update Product</h1>
+</div>
+<br>
+<br>
+
+<form #prodForm="ngForm" (ngSubmit)=updateProduct(prodForm)>
+<table class="table-1" align="center">
+    <tr>
+        <td><label for="tempretailerid">Retailer ID </label></td>
+        <td> <input type="text"  class="form-control" name="tempretailerid" [(ngModel)]="tp.tempretailerid" required readonly></td> 
+    </tr>
+    <tr>
+        <td><label for="tempproductcategory" >Category</label></td>
+        <td >
+            <select name="tempproductcategory"  class="form-control" name="tempproductcategory" [(ngModel)]="tp.tempproductcategory" disabled="true" required >
+                <option  value="Mobile">Mobile</option>
+                <option value="Fashion">Fashion</option>
+                <option value="Electronics">Electronics</option>
+            </select>
+    
+
+        </td>
+    </tr>
+    
+    <tr>
+        <td><label for="tempproductid">Prod ID </label></td>
+        <td> <input type="text"  class="form-control" name="tempproductid" [(ngModel)]="tp.tempproductid" required readonly></td> 
+    </tr>
+        <tr>
+        <td><label for="tempproductsubcategory">Sub Category</label></td>       
+        <td><input type="text" class="form-control" name="tempproductsubcategory" [(ngModel)]="tp.tempproductsubcategory" required></td> 
+        </tr>
+        <tr>
+            <td><label for="tempproductname">Product Name</label></td>
+            <td><input type="text" class="form-control" name="tempproductname" [(ngModel)]="tp.tempproductname" required></td>
+            </tr>
+   
+    <tr>
+        <td><label for="tempproductbrand"> Brand</label></td>
+        <td>
+            <input type="text" class="form-control" name="tempproductbrand" [(ngModel)]="tp.tempproductbrand" required>
+        </td>
+    </tr>
+    
+    <tr>
+        <td><label for="tempproductprice">  Price</label></td>
+        <td>
+            <input type="text" class="form-control" name="tempproductprice" [(ngModel)]="tp.tempproductprice" required>
+        </td>
+        </tr>
+        <tr>
+        <td><label for="tempproductquantity">  Stock</label></td>
+        <td><input type="number" class="form-control" name="tempproductquantity" [(ngModel)]="tp.tempproductcategory" required></td>
+    </tr>
+    <tr>
+        <td><label for="tempproductdesc">  Product description</label></td>
+        <td><textarea class="form-control" rows="3" name="tempproductdesc" [(ngModel)]="tp.tempproductdesc" required></textarea></td>
+        </tr>
+        
+          <tr>
+             <td> <label for="tempproductimage">Upload Image Path</label> </td>
+              <td>
+                <input type="text" class="form-control" name="tempproductimage" [(ngModel)]="tp.tempproductimage" required>
+            </td>
+          </tr>
+          <br>
+          <div class="col text-left">
+        <button type="submit" class="btn btn-primary" >UPDATE PRODUCT</button>
+        <br>
+        <br>
+        <button  class="btn btn-primary" routerLink="/tempproduct/Retailer">Back</button>
+        </div>
+        </table>
+        
+    </form>

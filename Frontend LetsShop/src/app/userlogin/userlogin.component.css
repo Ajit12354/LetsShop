@@ -1,0 +1,158 @@
+.Login-Page{
+    display: flex;
+    height: 500px;
+    width:650px;
+    position: absolute;
+    top:calc(50% - 250px);
+    left:calc(35% - 325px);
+    border-radius: 0.25rem;
+    background-color: #002645;
+    font-family: Arial, Helvetica, sans-serif;
+    animation: slide-open-login 350ms forwards;
+}
+@keyframes slide-open-login{
+    100% { left:calc(50% - 325px);}
+}
+.Login-LR{
+    border-radius: 0.25rem;
+    padding: 1.25rem;
+}
+.Login-Left{
+    width: 40%;;
+    background-color: black;
+    color: rgba(255,255,255,0.85);
+    position: relative;
+}
+.Login-Left h2{
+    font-size: 1.75rem;
+    font-weight: lighter;
+    margin:1rem auto;
+}
+.Login-Left p{
+    font-size: 1rem;
+    line-height: 1.7;
+}
+.Login-Left img{
+    width:calc(260px - 3rem);
+    object-fit: cover;
+    margin:1rem auto;
+    position: absolute;
+    top:calc(50% - 5rem);
+}
+.Login-Right{
+    width:60%;
+    background-color:red;
+}
+.User{
+    flex-grow: 1;
+    padding:0.25rem 0.5rem;
+    background-color:#002645;
+    color:white;
+    cursor: pointer;
+    border-radius: 0.5rem 2.5rem 0.5rem 0.5rem;
+}
+.Button-Click{
+    background-color: rgb(232, 240, 254);
+    color: #31353D;
+    font-weight: bolder;
+}
+.Form-group{
+    padding: 2rem 1rem;
+    height: calc(500px - 8rem);
+    border-radius: 0.25rem;
+    background-color: white;
+}
+.form{
+    position:relative;
+    height: 50px;
+    width:100%;
+    margin-bottom: 1rem;
+}
+.error{
+    background-color: lightgray;
+    text-align: center;
+    font-size: 0.75rem;
+    color:red;
+    font-weight:bolder;
+}
+.error-occur{
+    color:red;
+}
+.form input{
+    width:100%;
+    height: 100%;
+    color:black;
+    padding-top: 10px;
+    border:none;
+    outline: none;
+    padding-left: 0;
+    padding-right: 0;
+    background-color:lightgray;
+}
+.form label{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    width:100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid #002645;
+    overflow: hidden;
+}
+.form label::after{
+    content:"";
+    position: absolute;
+    height: 100%;
+    width:100%;
+    border-bottom: 3px solid #002645;
+    bottom: -1px;
+    left:0;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+.label-content{
+    position: relative;
+    font-size: 0.85rem;
+    font-weight: bolder;
+    bottom:0;
+    left:0;
+    transition: all 0.3s ease;
+}
+.form input:focus + .label-name .label-content,.form input:valid + .label-name .label-content{
+    transform: translateY(-150%);
+    font-size: 0.65rem;
+    color:#002645;
+    font-weight: bolder;
+}
+.form input:focus + .label-name::after, .form input:valid + .label-name::after{
+    transform: translateX(0);
+}
+.form-button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Login-Page-LButton{
+    width:100%;
+    border: none;
+    outline: none;
+    padding:0.35rem 1rem;
+    background-color:#002645;
+    color:white;
+    border-radius: 0.15rem;
+}
+.Login-Page-LButton:hover,.Login-Page-LButton:focus{
+    background-color:lime;
+    color: black;
+    font-weight: bold;
+    outline:none;
+}
+.Login-Page-Link{
+    margin:1rem 0;
+    color:red;
+    font-weight: bold;
+    text-decoration: none;
+}
+.Login-Page-Link:hover{
+    color: #31353D;
+}

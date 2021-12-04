@@ -1,0 +1,37 @@
+.header {
+    padding: 3px;
+    text-align: center;
+    background: #063FC0;
+    color: white;
+    font-size: 30px;
+  }
+
+
+.Add-Retailer table{
+    width:100%
+}  
+.table-1 td{
+    width:15%;
+    line-height: 60px;
+  
+}
+
+
+
+
+
+.table-1 td input,.table-1 td select,.table-1 td textarea{
+    width:80%;
+    
+}
+
+
+label{
+    font-size: 1.0rem;
+    font-weight:normal;
+    padding-inline-start: 30px;
+}
+
+button{
+   margin-left: 30px;
+}

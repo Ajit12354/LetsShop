@@ -1,0 +1,14 @@
+.div-1
+{
+    background-color: red;
+    text-align: center;
+}
+
+table,th,td
+{
+    border: 2px solid black;
+}
+th
+{
+    background-color: chartreuse;
+}

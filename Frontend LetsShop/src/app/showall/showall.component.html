@@ -1,0 +1,32 @@
+
+<!--<app-searchproduct></app-searchproduct>-->
+<button class="btn btn-info" routerLink="/search">Search</button>            <button class="btn-btn-info" routerLink="/">back</button>
+<br>
+<br>
+<table class="table table-bordered">
+    <thead>
+        <th>Product</th><th>Product Name</th> <th>Product Price </th> <th>Description</th><th>Quantity</th><th>Action</th>
+    </thead>
+    <tbody>
+            <tr *ngFor="let v of productArray">
+                    <td><lib-ngx-image-zoom
+                        [thumbImage]=v.productimage
+                        [fullImage]=v.productimage
+                        [magnification]="2"
+                        [enableScrollZoom]="true"
+                        [enableLens]="true"
+                        [lensWidth]="200"
+                    ></lib-ngx-image-zoom>
+                    </td>
+                    <td>{{ v.productname}}</td>
+                    <td>{{ v.productprice}}</td>
+                    <td>{{ v.productdesc}}</td>
+                    <td>{{v.productquantity}}</td>
+                    <td> <button class="btn btn-warning" (click)="AddWish(v.productid)">Add to wishlist</button><br>
+                        <button class="btn btn-danger" (click)="AddCart(v.productid)">Add to cart </button><br>
+                        <button class="btn btn-success" routerLink="/cart">View Cart</button>
+                        <button class="btn btn-info" routerLink="/wishlist">View Wishlist</button>
+                   </td>
+            </tr>
+    </tbody>
+    </table>
